@@ -4,14 +4,10 @@
 -- 2935
 
 
-SELECT id,year, max(wins) as top_win
-FROM teams
-WHERE b.year>1960
-GROUP BY b.year
-ORDER BY wins desc 
-
-inner join
-
-select name from teams 
-
+SELECT sum(stats.hits) 
+FROM players
+INNER JOIN 
+stats
+ON players.id = stats.player_id
+WHERE players.first_name = "Barry" and players.last_name="Bonds"
 ;
