@@ -14,4 +14,7 @@
 -- | 2020 | 30       |
 -- +------+----------+
 
-
+SELECT year, count(*)
+FROM teams
+GROUP BY year
+;
